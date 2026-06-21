@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -122,7 +121,6 @@
             animation: letterRise 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
             white-space: nowrap;
         }
-        /* Individual letter delays — works if each letter is a separate span */
         #loading-overlay .logo span:nth-child(1) {
             animation-delay: 0.02s;
         }
@@ -216,7 +214,6 @@
             }
         }
 
-        /* ─── Mobile Loading Overlay Fix ─── */
         @media (max-width: 640px) {
             #loading-overlay .logo {
                 font-size: 2.2rem;
@@ -373,15 +370,19 @@
                 background 0.4s ease,
                 border-color 0.4s ease;
             border: 1px solid transparent;
-            will-change: transform;
+            will-change: transform, box-shadow;
             position: relative;
             cursor: default;
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .team-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 28px 72px rgba(70, 50, 30, 0.08);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 56px rgba(70, 50, 30, 0.07);
             background: #EFEAE2;
-            border-color: rgba(70, 50, 30, 0.2);
+            border-color: rgba(70, 50, 30, 0.15);
         }
         .team-card .avatar {
             width: 120px;
@@ -400,6 +401,7 @@
             color: #46321E;
             text-transform: uppercase;
             position: relative;
+            flex-shrink: 0;
         }
         .team-card .avatar img {
             width: 100%;
@@ -410,10 +412,10 @@
         }
         .team-card:hover .avatar {
             border-color: #46321E;
-            transform: scale(1.05);
+            transform: scale(1.04);
         }
         .team-card:hover .avatar img {
-            transform: scale(1.08);
+            transform: scale(1.06);
         }
         .team-card .avatar .initials {
             position: absolute;
@@ -428,62 +430,216 @@
         .team-card .avatar img:not([src=""])+.initials {
             display: none;
         }
+        .team-card .details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 1.2rem;
+            width: 100%;
+        }
         .team-card .details .name {
             font-weight: 500;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: #2B1F16;
             transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
         }
         .team-card:hover .details .name {
-            transform: translateY(-2px);
+            transform: translateY(-1px);
         }
         .team-card .details .role {
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             color: #46321E;
             font-weight: 350;
             letter-spacing: 0.04em;
             transition: opacity 0.4s ease, transform 0.4s ease;
-            opacity: 0.7;
+            opacity: 0.75;
         }
         .team-card:hover .details .role {
             opacity: 1;
             transform: translateY(-1px);
         }
-        .team-card .details .origin {
-            font-size: 0.75rem;
-            color: rgba(43, 31, 22, 0.4);
+
+        /* ─── More Button ─── */
+        .more-btn {
+            background: none;
+            border: none;
+            color: #46321E;
+            font-size: 0.6rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            padding: 0.4rem 0.8rem;
+            margin-top: 0.2rem;
+            transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            border-radius: 40px;
+            background: rgba(70, 50, 30, 0.06);
+            border: 1px solid rgba(70, 50, 30, 0.06);
         }
+        .more-btn .arrow {
+            display: inline-block;
+            font-size: 0.45rem;
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            line-height: 1;
+        }
+        .more-btn.expanded .arrow {
+            transform: rotate(180deg);
+        }
+        .more-btn:hover {
+            background: rgba(70, 50, 30, 0.1);
+            border-color: rgba(70, 50, 30, 0.15);
+            color: #2B1F16;
+        }
+        .more-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* ─── Identity Line ─── */
         .team-card .details .identity-line {
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-style: italic;
             color: #2B1F16;
-            margin-top: 0.8rem;
-            padding-top: 0.8rem;
+            margin-top: 0.6rem;
+            padding-top: 0.6rem;
             border-top: 1px solid rgba(70, 50, 30, 0.06);
             line-height: 1.4;
             transition: opacity 0.4s ease;
+            width: 100%;
+            opacity: 0.7;
         }
-        .team-card::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 24px;
-            background: linear-gradient(135deg, transparent 30%, rgba(70, 50, 30, 0.04) 50%, transparent 70%);
-            background-size: 300% 300%;
-            opacity: 0;
-            transition: opacity 0.6s ease;
-            pointer-events: none;
-        }
-        .team-card:hover::after {
+        .team-card:hover .details .identity-line {
             opacity: 1;
-            animation: lightSweep 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
         }
-        @keyframes lightSweep {
-            0% {
-                background-position: 0% 50%;
+
+        /* ─── More Content (expandable) ─── */
+        .more-content {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.7s cubic-bezier(0.23, 1, 0.32, 1),
+                opacity 0.6s ease,
+                margin 0.5s ease,
+                padding 0.5s ease;
+            margin-top: 0;
+            padding-top: 0;
+            width: 100%;
+        }
+        .more-content.expanded {
+            max-height: 600px;
+            opacity: 1;
+            margin-top: 0.6rem;
+            padding-top: 0.6rem;
+            border-top: 1px solid rgba(70, 50, 30, 0.06);
+        }
+        .more-content p {
+            font-size: 0.85rem;
+            font-weight: 300;
+            color: #2B1F16;
+            line-height: 1.6;
+            text-align: left;
+            padding: 0 0.2rem;
+        }
+
+        /* ─── Team Card Expanded State ─── */
+        .team-card.expanded {
+            background: #EFEAE2;
+            border-color: rgba(70, 50, 30, 0.2);
+            box-shadow: 0 16px 48px rgba(70, 50, 30, 0.06);
+            transform: translateY(-4px);
+        }
+        .team-card.expanded:hover {
+            transform: translateY(-6px);
+        }
+
+        /* ─── Team Grid ─── */
+        .team-grid-6 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1.5rem;
+            align-items: start;
+        }
+        @media (min-width: 640px) and (max-width: 767px) {
+            .team-grid-6 {
+                grid-template-columns: repeat(2, 1fr);
             }
-            100% {
-                background-position: 100% 50%;
+        }
+        @media (min-width: 768px) {
+            .team-grid-6 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .team-grid-6 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (min-width: 1280px) {
+            .team-grid-6 {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+
+        /* ─── Responsive Team Card ─── */
+        @media (max-width: 768px) {
+            .team-grid-6 {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+                max-width: 380px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            .team-card .avatar {
+                width: 100px !important;
+                height: 100px !important;
+                margin-top: 1.4rem !important;
+            }
+            .team-card .details .name {
+                font-size: 1.05rem !important;
+            }
+            .team-card .details .role {
+                font-size: 0.7rem !important;
+            }
+            .team-card .details .identity-line {
+                font-size: 0.75rem !important;
+                margin-top: 0.5rem !important;
+                padding-top: 0.5rem !important;
+            }
+            .more-content p {
+                font-size: 0.8rem !important;
+            }
+            .btn,
+            .team-card,
+            .faq-item,
+            .blog-card {
+                cursor: pointer !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .team-card .avatar {
+                width: 80px !important;
+                height: 80px !important;
+                margin-top: 1.2rem !important;
+            }
+            .team-card .details .name {
+                font-size: 0.95rem !important;
+            }
+            .team-card .details .role {
+                font-size: 0.65rem !important;
+            }
+            .team-card .details .identity-line {
+                font-size: 0.7rem !important;
+            }
+            .more-content p {
+                font-size: 0.75rem !important;
+            }
+            .more-btn {
+                font-size: 0.5rem !important;
+                padding: 0.3rem 0.6rem !important;
             }
         }
 
@@ -853,7 +1009,6 @@
             width: 100%;
         }
 
-        /* ─── Responsive ─── */
         @media (max-width: 768px) {
             .clo-header {
                 padding: 1rem 1.2rem;
@@ -873,38 +1028,6 @@
             .nav-pill {
                 display: none !important;
             }
-
-            /* ─── Team: 1 card per row on mobile ─── */
-            .team-grid-6 {
-                grid-template-columns: 1fr !important;
-                gap: 1rem !important;
-                max-width: 380px !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-            }
-            .team-card .avatar {
-                width: 100px !important;
-                height: 100px !important;
-                margin-top: 1.4rem !important;
-            }
-            .team-card .details .name {
-                font-size: 1.05rem !important;
-            }
-            .team-card .details .role {
-                font-size: 0.7rem !important;
-            }
-            .team-card .details .identity-line {
-                font-size: 0.75rem !important;
-                margin-top: 0.5rem !important;
-                padding-top: 0.5rem !important;
-            }
-
-            .btn,
-            .team-card,
-            .faq-item,
-            .blog-card {
-                cursor: pointer !important;
-            }
         }
         @media (max-width: 480px) {
             .mobile-menu nav a {
@@ -912,20 +1035,6 @@
             }
             .mobile-menu nav {
                 gap: 1.2rem;
-            }
-            .team-card .avatar {
-                width: 80px !important;
-                height: 80px !important;
-                margin-top: 1.2rem !important;
-            }
-            .team-card .details .name {
-                font-size: 0.95rem !important;
-            }
-            .team-card .details .role {
-                font-size: 0.65rem !important;
-            }
-            .team-card .details .identity-line {
-                font-size: 0.7rem !important;
             }
         }
 
@@ -970,7 +1079,6 @@
             letter-spacing: 0.06em;
         }
 
-        /* ─── Social Links ─── */
         .clo-footer .social-links {
             display: flex;
             align-items: center;
@@ -1111,7 +1219,6 @@
             }
         }
 
-        /* ─── Scroll Indicator ─── */
         @keyframes scrollDown {
             0% {
                 top: -50%;
@@ -1121,7 +1228,6 @@
             }
         }
 
-        /* ─── Hero Title Word Reveal ─── */
         .hero-title .word {
             display: inline-block;
             opacity: 0;
@@ -1136,12 +1242,10 @@
             transition-delay: calc(var(--index, 0) * 0.08s);
         }
 
-        /* ─── Section Anchor Offset ─── */
         .section-anchor {
             scroll-margin-top: 80px;
         }
 
-        /* ─── Text Animation Helper ─── */
         .text-accent {
             color: #46321E;
         }
@@ -1165,34 +1269,6 @@
             }
         }
 
-        /* ─── Team grid ─── */
-        .team-grid-6 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 1.5rem;
-        }
-        @media (min-width: 640px) and (max-width: 767px) {
-            .team-grid-6 {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        @media (min-width: 768px) {
-            .team-grid-6 {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        @media (min-width: 1024px) {
-            .team-grid-6 {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        @media (min-width: 1280px) {
-            .team-grid-6 {
-                grid-template-columns: repeat(6, 1fr);
-            }
-        }
-
-        /* ─── Body scroll lock ─── */
         body.no-scroll {
             overflow: hidden;
         }
@@ -1473,59 +1549,83 @@
                 </div>
                 <div class="team-grid-6 stagger-children">
                     <!-- 1. Aadil Faisal -->
-                    <div class="team-card reveal reveal-scale">
+                    <div class="team-card reveal reveal-scale" data-member="aadil">
                         <div class="avatar">
-                            <img src="pictures/aadil.jpeg" alt="" loading="lazy" class="lazy" onerror="this.style.display='none'" onload="this.classList.add('loaded')" />
+                            <img src="pictures/aadil.jpeg" alt="Aadil Faisal" loading="lazy" class="lazy" onerror="this.style.display='none'" onload="this.classList.add('loaded')" />
                             <div class="initials">AF</div>
                         </div>
                         <div class="details">
                             <div class="name">Aadil Faisal</div>
                             <div class="role">Lead Developer</div>
-                            <div class="origin">Multan, PK</div>
+                            <button class="more-btn" data-target="aadil">
+                                More <span class="arrow">▾</span>
+                            </button>
                             <div class="identity-line">“Builds the systems that power seamless user journeys.”</div>
+                            <div class="more-content" id="more-aadil">
+                                <p>Aadil architects the technical foundation of CLOTHERIC's cinematic fashion platform. With deep expertise in full-stack development, performance optimization, and scalable architecture, he leads the engineering team in transforming creative visions into seamless digital experiences. His passion for elegant code and user-centric design drives innovation across the platform, ensuring every interaction feels effortless and immersive.</p>
+                            </div>
                         </div>
                     </div>
+
                     <!-- 2. Fahad Javed -->
-                    <div class="team-card reveal reveal-scale">
+                    <div class="team-card reveal reveal-scale" data-member="fahad">
                         <div class="avatar">
                             <img src="pictures/fahad.jpg" alt="Fahad Javed" loading="lazy" class="lazy" onerror="this.style.display='none'" onload="this.classList.add('loaded')" />
                             <div class="initials">FJ</div>
                         </div>
                         <div class="details">
                             <div class="name">Fahad Javed</div>
-                            <div class="role">Developer & Strategist</div>
-                            <div class="origin">Multan, PK</div>
+                            <div class="role">Developer &amp; Strategist</div>
+                            <button class="more-btn" data-target="fahad">
+                                More <span class="arrow">▾</span>
+                            </button>
                             <div class="identity-line">“Transforms ideas into systems by merging development, strategy, and execution.”</div>
+                            <div class="more-content" id="more-fahad">
+                                <p>Fahad bridges the critical gap between development and strategy at CLOTHERIC. Combining technical mastery with business acumen, he ensures our platform functions flawlessly while aligning with our broader vision. His strategic approach translates complex requirements into elegant, scalable solutions that serve both users and the business. Fahad's ability to see the big picture while sweating the details makes him an invaluable force behind the brand's growth.</p>
+                            </div>
                         </div>
                     </div>
+
                     <!-- 3. Sumeet Lohana -->
-                    <div class="team-card reveal reveal-scale">
+                    <div class="team-card reveal reveal-scale" data-member="sumeet">
                         <div class="avatar">
-                            <img src="pictures/summet.jpeg" alt="Sumeet" loading="lazy" class="lazy" onerror="this.style.display='none'" onload="this.classList.add('loaded')" />
+                            <img src="pictures/summet.jpeg" alt="Sumeet Lohana" loading="lazy" class="lazy" onerror="this.style.display='none'" onload="this.classList.add('loaded')" />
                             <div class="initials">SL</div>
                         </div>
                         <div class="details">
                             <div class="name">Sumeet Lohana</div>
                             <div class="role">Associate Software Engineer</div>
-                            <div class="origin">Multan, PK</div>
+                            <button class="more-btn" data-target="sumeet">
+                                More <span class="arrow">▾</span>
+                            </button>
                             <div class="identity-line">“Develops reliable code that supports product growth.”</div>
+                            <div class="more-content" id="more-sumeet">
+                                <p>Sumeet brings precision, reliability, and a keen eye for detail to the CLOTHERIC engineering team. As an Associate Software Engineer, he focuses on building robust, maintainable code that powers our platform's core features. His methodical approach ensures smooth, bug-free experiences across all user touchpoints. Sumeet's dedication to quality and continuous improvement helps the team ship features with confidence and speed.</p>
+                            </div>
                         </div>
                     </div>
+
                     <!-- 4. Muhammad Tariq -->
-                    <div class="team-card reveal reveal-scale">
+                    <div class="team-card reveal reveal-scale" data-member="tariq">
                         <div class="avatar">
                             <img src="pictures/tariq.png" alt="Muhammad Tariq" loading="lazy" class="lazy" onerror="this.style.display='none'" onload="this.classList.add('loaded')" />
                             <div class="initials">MT</div>
                         </div>
                         <div class="details">
                             <div class="name">Muhammad Tariq</div>
-                            <div class="role">Head of Community & Support</div>
-                            <div class="origin">Multan, PK</div>
+                            <div class="role">Head of Community &amp; Support</div>
+                            <button class="more-btn" data-target="tariq">
+                                More <span class="arrow">▾</span>
+                            </button>
                             <div class="identity-line">“Turns feedback into improvement and support into experience.”</div>
+                            <div class="more-content" id="more-tariq">
+                                <p>Muhammad Tariq is the empathetic voice of our community at CLOTHERIC. As Head of Community &amp; Support, he ensures every user feels heard, valued, and supported. He transforms feedback into actionable improvements and turns support interactions into memorable experiences that build lasting relationships with our audience. Tariq's genuine care for people and his ability to listen deeply make him the heart of our user-centric culture.</p>
+                            </div>
                         </div>
                     </div>
+
                     <!-- 5. Kirtan Kumar -->
-                    <div class="team-card reveal reveal-scale">
+                    <div class="team-card reveal reveal-scale" data-member="kirtan">
                         <div class="avatar">
                             <img src="pictures/kirtan.jpeg" alt="Kirtan Kumar" loading="lazy" class="lazy" onerror="this.style.display='none'" onload="this.classList.add('loaded')" />
                             <div class="initials">KK</div>
@@ -1533,21 +1633,32 @@
                         <div class="details">
                             <div class="name">Kirtan Kumar</div>
                             <div class="role">Head of Marketing</div>
-                            <div class="origin">Multan, PK</div>
+                            <button class="more-btn" data-target="kirtan">
+                                More <span class="arrow">▾</span>
+                            </button>
                             <div class="identity-line">“Grows the brand through smart marketing and audience engagement strategies.”</div>
+                            <div class="more-content" id="more-kirtan">
+                                <p>Kirtan leads marketing at CLOTHERIC with a focus on authentic brand storytelling and strategic audience engagement. He develops campaigns that connect our cinematic fashion vision with the right audiences, building a community of enthusiasts who appreciate the intersection of art, technology, and style. Kirtan's creative approach and data-driven mindset ensure our message resonates deeply and reaches far.</p>
+                            </div>
                         </div>
                     </div>
+
                     <!-- 6. Muhammad Rafay -->
-                    <div class="team-card reveal reveal-scale">
+                    <div class="team-card reveal reveal-scale" data-member="rafay">
                         <div class="avatar">
                             <img src="pictures/rafay1.jpeg" alt="Muhammad Rafay" loading="lazy" class="lazy" onerror="this.style.display='none'" onload="this.classList.add('loaded')" />
                             <div class="initials">MR</div>
                         </div>
                         <div class="details">
                             <div class="name">Muhammad Rafay</div>
-                            <div class="role">Head of Accounting & Finance</div>
-                            <div class="origin">Multan, PK</div>
+                            <div class="role">Head of Accounting &amp; Finance</div>
+                            <button class="more-btn" data-target="rafay">
+                                More <span class="arrow">▾</span>
+                            </button>
                             <div class="identity-line">“Builds structured financial systems that ensure transparency, accuracy, and stability.”</div>
+                            <div class="more-content" id="more-rafay">
+                                <p>Muhammad Rafay brings financial discipline, transparency, and strategic foresight to CLOTHERIC. As Head of Accounting &amp; Finance, he builds structured financial systems that ensure accuracy, stability, and ethical practices. His work provides the financial foundation that enables our creative vision to flourish. Rafay's meticulous attention to detail and commitment to integrity make him a trusted pillar of the organization.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1862,6 +1973,45 @@
                 if (window.innerWidth > 768 && menuOpen) {
                     closeMobileMenu();
                 }
+            });
+
+            // ─── TEAM CARD EXPAND / COLLAPSE ───
+            const moreButtons = document.querySelectorAll('.more-btn');
+
+            moreButtons.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const targetId = this.getAttribute('data-target');
+                    const card = this.closest('.team-card');
+                    const content = document.getElementById('more-' + targetId);
+
+                    if (!content || !card) return;
+
+                    const isExpanded = content.classList.contains('expanded');
+
+                    // Close any other open cards first (optional — uncomment for "only one open at a time")
+                    // document.querySelectorAll('.more-content.expanded').forEach(el => {
+                    //     if (el.id !== content.id) {
+                    //         el.classList.remove('expanded');
+                    //         const parentCard = el.closest('.team-card');
+                    //         if (parentCard) parentCard.classList.remove('expanded');
+                    //         const siblingBtn = parentCard ? parentCard.querySelector('.more-btn') : null;
+                    //         if (siblingBtn) siblingBtn.classList.remove('expanded');
+                    //     }
+                    // });
+
+                    if (isExpanded) {
+                        content.classList.remove('expanded');
+                        card.classList.remove('expanded');
+                        this.classList.remove('expanded');
+                        this.innerHTML = 'More <span class="arrow">▾</span>';
+                    } else {
+                        content.classList.add('expanded');
+                        card.classList.add('expanded');
+                        this.classList.add('expanded');
+                        this.innerHTML = 'Less <span class="arrow">▾</span>';
+                    }
+                });
             });
 
         })();
