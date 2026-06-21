@@ -94,6 +94,8 @@
             align-items: center;
             justify-content: center;
             transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+            padding: 1.5rem;
+            text-align: center;
         }
         #loading-overlay.exit {
             opacity: 0;
@@ -108,13 +110,19 @@
             display: flex;
             gap: 0.04em;
             overflow: hidden;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
         }
         #loading-overlay .logo span {
             display: inline-block;
             opacity: 0;
             transform: translateY(30px) scale(0.96);
             animation: letterRise 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            white-space: nowrap;
         }
+        /* Individual letter delays — works if each letter is a separate span */
         #loading-overlay .logo span:nth-child(1) {
             animation-delay: 0.02s;
         }
@@ -205,6 +213,36 @@
             }
             100% {
                 left: 100%;
+            }
+        }
+
+        /* ─── Mobile Loading Overlay Fix ─── */
+        @media (max-width: 640px) {
+            #loading-overlay .logo {
+                font-size: 2.2rem;
+                letter-spacing: 0.12em;
+                gap: 0.02em;
+            }
+            #loading-overlay .sub {
+                font-size: 0.4rem;
+                letter-spacing: 0.3em;
+                margin-top: 0.7rem;
+            }
+            #loading-overlay .bar {
+                width: 80px;
+                margin-top: 1.2rem;
+            }
+        }
+        @media (max-width: 400px) {
+            #loading-overlay .logo {
+                font-size: 1.8rem;
+                letter-spacing: 0.08em;
+            }
+            #loading-overlay .sub {
+                font-size: 0.35rem;
+            }
+            #loading-overlay .bar {
+                width: 60px;
             }
         }
 
@@ -1167,7 +1205,7 @@
     <div id="loading-overlay">
         <div class="grain"></div>
         <div class="logo">
-            <span>CLOTHERIC</span>
+            <span>C</span><span>L</span><span>O</span><span>T</span><span>H</span><span>E</span><span>R</span><span>I</span><span>C</span>
         </div>
         <div class="sub">Cinematic Fashion Universe</div>
         <div class="bar"></div>
