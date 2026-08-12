@@ -1015,6 +1015,12 @@
         .mobile-menu nav a:nth-child(8) {
             transition-delay: 0.40s;
         }
+        .mobile-menu nav a:nth-child(9) {
+            transition-delay: 0.45s;
+        }
+        .mobile-menu nav a:nth-child(10) {
+            transition-delay: 0.50s;
+        }
         .mobile-menu nav a::after {
             content: '';
             position: absolute;
@@ -1105,6 +1111,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 1.5rem;
+            justify-content: center;
         }
         .clo-footer .links a {
             color: rgba(255, 255, 255, 0.4);
@@ -1212,12 +1219,21 @@
             margin-bottom: 0.6rem;
             color: #2B1F16;
         }
-        .legal-section p {
+        .legal-section p,
+        .legal-section li {
             font-weight: 300;
             font-size: 0.95rem;
             color: #2B1F16;
             line-height: 1.7;
             max-width: 720px;
+        }
+        .legal-section ul {
+            padding-left: 1.5rem;
+            margin-top: 0.3rem;
+            list-style: disc;
+        }
+        .legal-section ul li {
+            max-width: 700px;
         }
 
         /* ─── Lazy Images ─── */
@@ -1347,6 +1363,8 @@
         <a href="#blog" data-target="blog"></a>
         <a href="#terms" data-target="terms"></a>
         <a href="#privacy" data-target="privacy"></a>
+        <a href="#refund" data-target="refund"></a>
+        <a href="#ownership" data-target="ownership"></a>
     </nav>
 
     <!-- ─── HEADER ─── -->
@@ -1380,6 +1398,8 @@
             <a data-target="faq">FAQ</a>
             <a data-target="terms">Terms</a>
             <a data-target="privacy">Privacy</a>
+            <a data-target="refund">Refund</a>
+            <a data-target="ownership">Ownership</a>
         </nav>
         <span class="close-hint">Tap anywhere to close</span>
     </div>
@@ -1423,7 +1443,7 @@
                             The future of fashion is<br />
                             <span class="text-accent tracking-breathe">immersive, intelligent, and emotional.</span>
                         </h2>
-                        <p class="text-[1rem] font-[300] text-[#2B1F16] mt-6 max-w-lg mx-auto leading-relaxed">“Fashion is shifting into a sensory digital language where AI, environment, and identity converge into deeply personal expression.”</p>
+                        <p class="text-[1rem] font-[300] text-[#2B1F16] mt-6 max-w-lg mx-auto leading-relaxed">"Fashion is shifting into a sensory digital language where AI, environment, and identity converge into deeply personal expression."</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 stagger-children">
                         <div class="bg-primary/30 rounded-2xl p-8 backdrop-blur-sm border border-[rgba(70,50,30,0.03)] reveal reveal-scale">
@@ -1605,7 +1625,7 @@
                             <button class="more-btn" data-target="aadil">
                                 More <span class="arrow">▾</span>
                             </button>
-                            <div class="identity-line">“Builds the systems that power seamless user journeys.”</div>
+                            <div class="identity-line">"Builds the systems that power seamless user journeys."</div>
                             <div class="more-content" id="more-aadil">
                                 <p>I architects the technical foundation of CLOTHERIC's cinematic fashion platform. With deep expertise in full-stack development, performance optimization, and scalable architecture, i leads the engineering team in transforming creative visions into seamless digital experiences. My passion for elegant code and user centric design drives innovation across the platform, ensuring every interaction feels effortless and immersive.</p>
                             </div>
@@ -1624,7 +1644,7 @@
                             <button class="more-btn" data-target="fahad">
                                 More <span class="arrow">▾</span>
                             </button>
-                            <div class="identity-line">“Transforms ideas into systems by merging development, strategy, and execution.”</div>
+                            <div class="identity-line">"Transforms ideas into systems by merging development, strategy, and execution."</div>
                             <div class="more-content" id="more-fahad">
                                 <p>I bridges the critical gap between development and strategy at CLOTHERIC. Combining technical mastery with business acumen, i ensures our platform functions flawlessly while aligning with our broader vision. My strategic approach translates complex requirements into elegant, scalable solutions that serve both users and the business.My  ability to see the big picture while sweating the details makes him an invaluable force behind the brand's growth.</p>
                             </div>
@@ -1643,7 +1663,7 @@
                             <button class="more-btn" data-target="sumeet">
                                 More <span class="arrow">▾</span>
                             </button>
-                            <div class="identity-line">“Develops reliable code that supports product growth.”</div>
+                            <div class="identity-line">"Develops reliable code that supports product growth."</div>
                             <div class="more-content" id="more-sumeet">
                                 <p>I brings precision, reliability, and a keen eye for detail to the CLOTHERIC engineering team. As an Associate Software Engineer,i focuses on building robust, maintainable code that powers our platform's core features. My methodical approach ensures smooth, bug-free experiences across all user touchpoints.My dedication to quality and continuous improvement helps the team ship features with confidence and speed.</p>
                             </div>
@@ -1662,7 +1682,7 @@
                             <button class="more-btn" data-target="tariq">
                                 More <span class="arrow">▾</span>
                             </button>
-                            <div class="identity-line">“Turns feedback into improvement and support into experience.”</div>
+                            <div class="identity-line">"Turns feedback into improvement and support into experience."</div>
                             <div class="more-content" id="more-tariq">
                                 <p>My empathetic voice of our community at CLOTHERIC. As Head of Community and Support, i ensures every user feels heard, valued, and supported. He transforms feedback into actionable improvements and turns support interactions into memorable experiences that build lasting relationships with our audience. My genuine care for people and my ability to listen deeply make him the heart of our user-centric culture.</p>
                             </div>
@@ -1681,7 +1701,7 @@
                             <button class="more-btn" data-target="kirtan">
                                 More <span class="arrow">▾</span>
                             </button>
-                            <div class="identity-line">“Grows the brand through smart marketing and audience engagement strategies.”</div>
+                            <div class="identity-line">"Grows the brand through smart marketing and audience engagement strategies."</div>
                             <div class="more-content" id="more-kirtan">
                                 <p>I leads marketing at CLOTHERIC with a focus on authentic brand storytelling and strategic audience engagement.I develops campaigns that connect our cinematic fashion vision with the right audiences, building a community of enthusiasts who appreciate the intersection of art, technology, and style. My  creative approach and data-driven mindset ensure our message resonates deeply and reaches far.</p>
                             </div>
@@ -1700,7 +1720,7 @@
                             <button class="more-btn" data-target="rafay">
                                 More <span class="arrow">▾</span>
                             </button>
-                            <div class="identity-line">“Builds structured financial systems that ensure transparency, accuracy, and stability.”</div>
+                            <div class="identity-line">"Builds structured financial systems that ensure transparency, accuracy, and stability."</div>
                             <div class="more-content" id="more-rafay">
                                 <p>I brings financial discipline, transparency, and strategic foresight to CLOTHERIC. As Head of Accounting and Finance, I builds structured financial systems that ensure accuracy, stability, and ethical practices.My work provides the financial foundation that enables our creative vision to flourish.My meticulous attention to detail and commitment to integrity make him a trusted pillar of the organization.</p>
                             </div>
@@ -1799,12 +1819,81 @@
                         <h2 class="text-[2.4rem] md:text-[3.6rem] font-[200] tracking-[-0.02em] text-balance text-[#2B1F16] reveal reveal-fade-up">Scenic <span class="text-accent">Contract</span></h2>
                     </div>
                     <div class="stagger-children">
-                        <div class="legal-section reveal reveal-fade-up"><h2>1. Introduction</h2><p>Welcome to CLOTHERIC. By using our platform, you agree to these terms. We're building a cinematic fashion universe, and we want you to enjoy it responsibly.</p></div>
-                        <div class="legal-section reveal reveal-fade-up"><h2>2. The Experience</h2><p>CLOTHERIC provides a cinematic, motion-first fashion experience. You agree to experience fashion as art, not merely as product. Our platform is designed for emotional immersion.</p></div>
-                        <div class="legal-section reveal reveal-fade-up"><h2>3. Intellectual Property</h2><p>All content, designs, motion systems, and visual language on CLOTHERIC are our intellectual property. You may not reproduce, distribute, or create derivative works without permission.</p></div>
-                        <div class="legal-section reveal reveal-fade-up"><h2>4. User Conduct</h2><p>We believe in respectful engagement. Harassment, abuse, or misuse of our platform will result in termination of access. We're here to create beauty, not conflict.</p></div>
-                        <div class="legal-section reveal reveal-fade-up"><h2>5. Changes to Terms</h2><p>As we evolve the CLOTHERIC universe, these terms may change. We'll notify you of significant updates. Your continued use constitutes acceptance.</p></div>
-                        <div class="legal-section reveal reveal-fade-up"><h2>6. Contact</h2><p>Questions about these terms? Reach us at contact@clotheric.com. We're human and we read every message.</p></div>
+                        <div class="legal-section reveal reveal-fade-up"><h2>1. Introduction</h2><p>Welcome to CLOTHERIC. By using our platform, you agree to these Terms and Conditions. We're building a cinematic fashion universe, and we want you to enjoy it responsibly. These terms govern your use of our website, services, and content. Please read them carefully before using our platform.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>2. Acceptance of Terms</h2><p>By accessing or using the CLOTHERIC website, you agree to be bound by these Terms and Conditions and our Privacy Policy. If you do not agree with any part of these terms, you must not use our website. Your continued use of the platform constitutes your acceptance of any updates or modifications to these terms.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>3. Eligibility</h2><p>You must be at least 18 years old to make purchases on our platform. By using CLOTHERIC, you represent that you are legally capable of entering into binding contracts. If you are under 18, you may only use our website with the involvement of a parent or guardian.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>4. Website Use</h2><p>CLOTHERIC grants you a limited, non-exclusive, non-transferable license to access and use our website for personal, non-commercial purposes. You agree to use the platform in accordance with all applicable laws and regulations. Any unauthorized use of our website or its content may result in termination of your access.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>5. Account Responsibilities</h2><p>If you create an account on CLOTHERIC, you are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account or any other security breach.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>6. Product Information</h2><p>We strive to provide accurate and detailed product information, including descriptions, images, specifications, and pricing. However, we do not guarantee that all information is error-free. Please refer to our product listings for the most current information about availability and pricing.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>7. Product Availability</h2><p>All products displayed on CLOTHERIC are subject to availability. We reserve the right to limit the quantity of products we supply, to discontinue any product at any time, or to refuse any order for any reason. We will notify you if a product you have ordered becomes unavailable.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>8. Pricing</h2><p>All prices listed on CLOTHERIC are in [INSERT CURRENCY] and are inclusive of applicable taxes unless otherwise stated. We reserve the right to change prices at any time without prior notice. However, the price you pay will be the price displayed at the time you place your order.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>9. Taxes</h2><p>You are responsible for any applicable taxes, duties, or fees associated with your purchase. These may include sales tax, value-added tax (VAT), customs duties, or other import fees, depending on your location. CLOTHERIC is not responsible for any additional charges imposed by your local authorities.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>10. Orders</h2><p>When you place an order on CLOTHERIC, you are making an offer to purchase the products in your cart. We reserve the right to accept or decline your order for any reason. An order confirmation email does not constitute acceptance of your order; acceptance occurs when we ship your products.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>11. Order Acceptance</h2><p>We will confirm the acceptance of your order by sending you an order confirmation email. This confirmation does not guarantee that we will fulfill your order. We reserve the right to cancel your order at any time before shipment, including due to product unavailability, pricing errors, or suspected fraud.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>12. Order Cancellation</h2><p>You may cancel your order before it has been processed for shipping. Please refer to our Cancellation, Return, and Refund Policy for detailed information on order cancellation. Once an order has been shipped, it cannot be canceled; you will need to initiate a return.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>13. Payments</h2><p>We accept [INSERT PAYMENT METHODS] for purchases. You agree to provide accurate payment information and authorize us to charge the full amount of your order, including any applicable taxes and shipping fees. We use secure payment processing systems to protect your financial information.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>14. Shipping</h2><p>We ship orders to [INSERT SHIPPING DESTINATIONS]. Please refer to our shipping policy for information about delivery timeframes, shipping methods, and costs. We aim to process and ship orders within [INSERT PROCESSING TIME]. Any shipping dates provided are estimates and not guaranteed.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>15. Delivery</h2><p>Delivery times may vary depending on your location and the shipping method chosen. We are not responsible for delays caused by shipping carriers, customs processing, or other factors beyond our control. You will receive a tracking number once your order has been shipped.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>16. Returns</h2><p>We want you to love your CLOTHERIC purchase. If you are not completely satisfied, you may be eligible to return your items within [INSERT RETURN WINDOW] of receipt. Please refer to our Cancellation, Return, and Refund Policy for complete details on the return process and conditions.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>17. Refunds</h2><p>Once we receive and inspect your returned item, we will notify you of the approval or rejection of your refund. If approved, your refund will be processed and applied to your original payment method within [INSERT REFUND PROCESSING TIME]. Please see our refund policy for more details.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>18. Exchanges</h2><p>We offer exchanges for items that are defective, damaged, or incorrect. Please contact our customer support team to initiate an exchange. Exchanges are subject to product availability. We will ship the replacement item once the returned item has been received and inspected.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>19. Intellectual Property</h2><p>All content, designs, motion systems, visual language, text, graphics, logos, images, audio clips, digital downloads, and other materials on CLOTHERIC are our intellectual property. These are protected by copyright, trademark, and other intellectual property laws.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>20. Ownership</h2><p>CLOTHERIC owns all rights, title, and interest in and to the website, including all content, source code, databases, functionality, software, and designs. You do not acquire any ownership rights by using our website. For more information, please see our Ownership Statement.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>21. Copyright</h2><p>All content on CLOTHERIC is protected by copyright. Unauthorized reproduction, distribution, or use of any content is prohibited. We respect the intellectual property rights of others and expect our users to do the same. If you believe your work has been used in a way that constitutes copyright infringement, please contact us.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>22. Trademarks</h2><p>The CLOTHERIC name, logo, and all related trademarks, service marks, and trade names are our exclusive property. You may not use our trademarks without our prior written consent. Any unauthorized use of our trademarks may result in legal action.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>23. Prohibited Use</h2><p>You agree not to use the CLOTHERIC website for any unlawful purpose or in any way that could damage, disable, overburden, or impair the platform. Prohibited activities include but are not limited to: hacking, data mining, introducing malware, spamming, or attempting to gain unauthorized access to our systems.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>24. Website Security</h2><p>We take website security seriously. However, no system is completely secure. We cannot guarantee that our website will be free from unauthorized access, hacking, or other security breaches. You agree to use the website at your own risk and to take appropriate measures to protect your personal information.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>25. User-Generated Content</h2><p>If you submit any content to CLOTHERIC, including reviews, comments, or other materials, you grant us a non-exclusive, royalty-free, perpetual, irrevocable license to use, reproduce, modify, and distribute that content. You represent that you have the necessary rights to grant this license.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>26. Third-Party Links</h2><p>Our website may contain links to third-party websites. These links are provided for your convenience. We do not endorse or control these third-party sites and are not responsible for their content, privacy policies, or practices. You access third-party websites at your own risk.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>27. Third-Party Services</h2><p>We may use third-party services to process payments, provide analytics, or enhance our website functionality. These services have their own terms and privacy policies. We are not responsible for the actions of these third-party service providers.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>28. Website Availability</h2><p>We strive to provide a seamless experience, but we do not guarantee that our website will be available at all times. We may temporarily suspend access for maintenance, upgrades, or other reasons without prior notice. We are not liable for any inconvenience or loss caused by website unavailability.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>29. Errors and Corrections</h2><p>We make every effort to ensure the accuracy of our website content. However, errors may occasionally occur. We reserve the right to correct any errors, inaccuracies, or omissions and to change or update information at any time without notice.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>30. Limitation of Liability</h2><p>To the maximum extent permitted by law, CLOTHERIC shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from your use of our website or purchase of our products. This includes, but is not limited to, damages for lost profits, lost data, or business interruption.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>31. Disclaimer</h2><p>CLOTHERIC provides the website and its content on an "as is" and "as available" basis. We make no warranties, express or implied, regarding the website's operation, security, or availability. We do not guarantee that the website will be error-free, secure, or uninterrupted.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>32. Indemnification</h2><p>You agree to indemnify and hold CLOTHERIC harmless from any claims, losses, liabilities, or expenses arising from your use of our website, your violation of these Terms and Conditions, or your infringement of any third-party rights.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>33. Termination</h2><p>We reserve the right to terminate or suspend your access to CLOTHERIC at any time, without prior notice, for any reason, including if you violate these Terms and Conditions. Upon termination, your right to use the website will immediately cease.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>34. Changes to Terms</h2><p>We may update these Terms and Conditions from time to time. Changes will be effective upon posting on this page. We encourage you to review these terms periodically. Your continued use of the website after changes are posted constitutes your acceptance of the updated terms.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>35. Governing Law</h2><p>[GOVERNING LAW / JURISDICTION TO BE INSERTED]. Any disputes arising from these terms or your use of the website shall be resolved in accordance with the laws of this jurisdiction.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>36. Dispute Resolution</h2><p>We encourage you to contact us directly to resolve any issues before pursuing legal action. If a dispute cannot be resolved informally, it will be resolved through [INSERT DISPUTE RESOLUTION METHOD], in [INSERT LOCATION].</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>37. Contact Information</h2><p>If you have any questions about these Terms and Conditions, please contact us at contact@clotheric.com. We are committed to addressing your concerns and will respond within a reasonable timeframe.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>38. Effective Date</h2><p>These Terms and Conditions are effective as of [INSERT EFFECTIVE DATE]. They apply to all users of the CLOTHERIC website from that date forward. Thank you for choosing CLOTHERIC.</p></div>
                     </div>
                 </div>
             </div>
@@ -1820,11 +1909,315 @@
                         <p class="text-[1rem] font-[300] text-[#2B1F16] mt-4 max-w-lg mx-auto leading-relaxed reveal reveal-fade-up">We believe in minimal data, maximum trust.</p>
                     </div>
                     <div class="stagger-children">
-                        <div class="legal-section reveal reveal-fade-up"><h2>What We Collect</h2><p>We collect only what's necessary: your email if you subscribe, and basic analytics to improve your experience. No tracking pixels, no data selling, no surveillance.</p></div>
-                        <div class="legal-section reveal reveal-fade-up"><h2>How We Use It</h2><p>To send you cinematic updates, to understand how people experience CLOTHERIC, and to make the universe better. That's it.</p></div>
-                        <div class="legal-section reveal reveal-fade-up"><h2>Your Rights</h2><p>You can request deletion of your data at any time. We're transparent, accessible, and respectful of your digital privacy.</p></div>
-                        <div class="legal-section reveal reveal-fade-up"><h2>Security</h2><p>We take security seriously. Your data is encrypted and stored with care. We believe privacy is a fundamental right.</p></div>
-                        <div class="legal-section reveal reveal-fade-up"><h2>Contact</h2><p>Privacy questions? contact@clotheric.com. We'll respond within 24 hours.</p></div>
+                        <div class="legal-section reveal reveal-fade-up"><h2>1. Introduction</h2><p>CLOTHERIC is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you visit our website. We believe in transparency and want you to feel confident about how we handle your data.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>2. Scope</h2><p>This Privacy Policy applies to all personal information collected through our website. It covers our practices regarding data collection, use, disclosure, and protection. By using CLOTHERIC, you agree to the practices described in this policy.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>3. Information We Collect</h2><p>We collect only the information necessary to provide you with a seamless experience. This includes information you provide directly to us, as well as certain information automatically collected when you interact with our website.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>4. Personal Information</h2><p>We collect personal information that you voluntarily provide to us. This may include your name, email address, shipping address, and phone number when you create an account, place an order, or subscribe to our communications.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>5. Contact Information</h2><p>If you contact us via email or through our website, we collect the information you provide, including your email address and the content of your message. We use this information to respond to your inquiries and provide customer support.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>6. Email Information</h2><p>When you subscribe to our newsletter or email updates, we collect your email address. You may unsubscribe from these communications at any time using the link provided in each email or by contacting us directly.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>7. Account Information</h2><p>When you create an account on CLOTHERIC, we collect your name, email address, and any other information you choose to provide. You may update your account information at any time by logging into your account.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>8. Order Information</h2><p>When you place an order, we collect information necessary to process your purchase, including billing address, shipping address, payment information, and order details. This information is essential for order fulfillment and customer support.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>9. Payment-Related Information</h2><p>We do not store your payment card information. All payment processing is handled by our secure third-party payment processors. They collect and process your payment information in accordance with their own privacy policies and security standards.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>10. Shipping Information</h2><p>We collect shipping addresses to deliver your orders. This information is shared with our shipping partners solely for order delivery purposes. We do not use your shipping information for any other purpose without your consent.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>11. Device Information</h2><p>We automatically collect certain information about your device, including browser type, operating system, and screen resolution. This helps us optimize our website for different devices and improve user experience.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>12. Browser Information</h2><p>We collect browser-related information, such as language preferences and browser settings, to provide content that is most relevant to you and to ensure compatibility with our website.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>13. IP Address</h2><p>We collect IP addresses for analytical purposes and to help us understand website traffic patterns. Your IP address may also be used to approximate your geographic location for regional content optimization.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>14. Cookies</h2><p>We use cookies to enhance your experience on our website. Cookies are small text files stored on your device that help us remember your preferences and analyze website usage. You can control cookie settings through your browser.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>15. Analytics</h2><p>We use basic analytics to understand how visitors interact with our website. This helps us improve our content and user experience. We collect aggregated, anonymized data and do not track individual users across other websites.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>16. How We Collect Information</h2><p>We collect information through direct submissions (when you provide it to us), automated technologies (such as cookies and analytics tools), and from third-party service providers (such as payment processors).</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>17. Why We Collect Information</h2><p>We collect information to provide and improve our services, process orders, communicate with you, personalize your experience, and ensure website security. We only collect what is necessary for these purposes.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>18. How We Use Information</h2><p>Your information is used to process orders, provide customer support, improve our website, send marketing communications (with your consent), and comply with legal obligations. We do not sell your personal information to third parties.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>19. Order Processing</h2><p>We use your information to process and fulfill your orders, including order confirmation, shipping updates, and customer support related to your purchase. This is necessary to complete your transaction.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>20. Customer Support</h2><p>We use your information to respond to your inquiries, provide assistance, and resolve any issues you may encounter. This helps us ensure you have a positive experience with CLOTHERIC.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>21. Website Improvement</h2><p>We analyze how visitors use our website to identify areas for improvement. This helps us create a better experience for all users and optimize our content and design.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>22. Marketing Communications</h2><p>With your explicit consent, we may send you promotional emails about new products, special offers, and other news. You can opt out of these communications at any time using the unsubscribe link in each email.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>23. Promotional Communications</h2><p>We may occasionally send you information about our products and services that we believe may be of interest to you. These communications are only sent with your permission, and you can opt out at any time.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>24. Data Sharing</h2><p>We share your information only with trusted third-party service providers who assist us in operating our website and fulfilling orders. These parties are contractually obligated to protect your information and use it only for the purposes we specify.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>25. Service Providers</h2><p>We use service providers for payment processing, shipping, analytics, and customer support. We choose providers who demonstrate strong data protection practices and comply with applicable privacy laws.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>26. Payment Processors</h2><p>Our payment processors collect and process your payment information securely. We do not have access to your full payment card details. We recommend reviewing the privacy policies of our payment processors for more information.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>27. Shipping Providers</h2><p>We share shipping information with our carriers to deliver your orders. They use this information solely for order delivery and may contact you regarding shipment status if necessary.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>28. Analytics Providers</h2><p>We use analytics tools to understand website usage patterns. These providers collect aggregated, anonymized data that does not personally identify you. We do not share personal information with analytics providers.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>29. Third-Party Services</h2><p>We may use third-party services to enhance our website functionality. These services have their own privacy policies, and we encourage you to review them. We are not responsible for their privacy practices.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>30. Data Security</h2><p>We implement appropriate technical and organizational measures to protect your personal information. This includes encryption, secure data storage, and access controls. However, no method of transmission over the internet is completely secure.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>31. Data Retention</h2><p>We retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, including legal, accounting, or reporting requirements. We will securely delete your information when it is no longer needed.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>32. User Rights</h2><p>You have certain rights regarding your personal information, including the right to access, correct, delete, or restrict the processing of your data. We are committed to helping you exercise these rights.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>33. Data Deletion</h2><p>You may request the deletion of your personal information at any time. We will delete your data, except where we are required to retain it for legal or legitimate business purposes. Please note that deleting your account may prevent us from fulfilling existing orders.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>34. Correction Requests</h2><p>If you believe any information we hold about you is incorrect, you may request a correction. We will make reasonable efforts to update your information as soon as possible.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>35. Access Requests</h2><p>You may request a copy of the personal information we hold about you. We will provide this information in a commonly used electronic format within a reasonable timeframe.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>36. Marketing Opt-Out</h2><p>You may opt out of receiving marketing communications at any time. Simply use the unsubscribe link in any marketing email or contact us directly. We will honor your preference promptly.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>37. Cookies Management</h2><p>You can manage your cookie preferences through your browser settings. You may choose to block or delete cookies, though this may affect your experience on our website. We use only necessary and functional cookies.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>38. Children's Privacy</h2><p>CLOTHERIC is not intended for children under the age of 13. We do not knowingly collect personal information from children. If we discover that we have collected such information, we will delete it immediately.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>39. International Data Considerations</h2><p>[INSERT INTERNATIONAL DATA TRANSFER POLICY]. We process data in accordance with applicable data protection laws. If you are accessing our website from outside this jurisdiction, please be aware that your information may be transferred to and processed in this jurisdiction.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>40. Third-Party Websites</h2><p>Our website may contain links to third-party sites. We are not responsible for the privacy practices or content of these external websites. We encourage you to review their privacy policies before providing any personal information.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>41. Policy Changes</h2><p>We may update this Privacy Policy from time to time. Changes will be effective when posted on this page. We encourage you to review this policy periodically to stay informed about how we protect your privacy.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>42. Contact Information</h2><p>If you have questions about this Privacy Policy or how we handle your personal information, please contact us at contact@clotheric.com. We respond to all inquiries within a reasonable timeframe.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>43. Effective Date</h2><p>This Privacy Policy is effective as of [INSERT EFFECTIVE DATE]. Thank you for trusting CLOTHERIC with your privacy. We are committed to protecting your data and providing you with a secure, transparent experience.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ REFUND ═════════════════════════════════════════════════════ -->
+        <section id="refund" class="section-anchor section-spacing" style="background:#F6F3EE;">
+            <div class="container-cinema">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <span class="text-[0.65rem] tracking-[0.2em] uppercase text-[#46321E] block mb-4 reveal reveal-fade-up">Policy</span>
+                        <h2 class="text-[2.4rem] md:text-[3.6rem] font-[200] tracking-[-0.02em] text-balance text-[#2B1F16] reveal reveal-fade-up">Cancellation / Return / <span class="text-accent">Refund</span> Policy</h2>
+                        <p class="text-[1rem] font-[300] text-[#2B1F16] mt-4 max-w-lg mx-auto leading-relaxed reveal reveal-fade-up">Our commitment to your satisfaction, explained clearly.</p>
+                    </div>
+                    <div class="stagger-children">
+                        <div class="legal-section reveal reveal-fade-up"><h2>1. Purpose of This Policy</h2><p>At CLOTHERIC, we want you to love every purchase you make. This Cancellation, Return, and Refund Policy is designed to clearly explain your rights and our responsibilities when you shop with us. We believe in transparency, fairness, and making things right if they don't go as planned.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>2. Scope of This Policy</h2><p>This policy applies to all purchases made through the CLOTHERIC website. It covers order cancellation, product returns, exchanges, and refunds. Please read this policy carefully before making a purchase. By placing an order, you agree to the terms outlined here.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>3. Order Cancellation</h2><p>We understand that sometimes you may need to cancel your order. The ability to cancel depends on the processing status of your order. We process orders quickly to ensure fast delivery, so we encourage you to act promptly if you need to cancel.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>4. Cancellation Before Processing</h2><p>If you need to cancel your order before it has been processed for shipping, you may do so without any penalty. Simply contact our customer support team at contact@clotheric.com with your order number. We will cancel your order and issue a full refund.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>5. Cancellation After Processing</h2><p>If your order has already been processed but not yet shipped, we may be able to cancel it. Please contact us immediately. We cannot guarantee cancellation at this stage, but we will make every effort to accommodate your request.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>6. Cancellation After Dispatch</h2><p>Once an order has been dispatched, it cannot be canceled. You will need to wait for the order to be delivered and then initiate a return. Please refer to our return policy for further instructions.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>7. Cancellation of Customized or Special Orders</h2><p>Customized, personalized, or special order items may not be cancelable once production has begun. We will inform you of any additional restrictions at the time of order. Please confirm your order details carefully before placing customized orders.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>8. Cancellation Charges</h2><p>We do not charge cancellation fees. If you cancel your order before it has been dispatched, you will receive a full refund of the purchase price. Any transaction fees charged by your payment provider may be non-refundable.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>9. How Customers Request Cancellation</h2><p>To request a cancellation, please contact us at contact@clotheric.com. Include your order number and a clear request for cancellation. We will confirm receipt of your request and inform you of the cancellation status.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>10. Information Required for Cancellation</h2><p>To process your cancellation, we need your order number and the email address used for the purchase. Please provide these details in your cancellation request to help us locate your order quickly.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>11. Return Eligibility</h2><p>To be eligible for a return, your item must be in the same condition that you received it, unworn, unused, with tags attached, and in its original packaging. You will also need the receipt or proof of purchase.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>12. Return Time Period</h2><p>You have [INSERT RETURN WINDOW] from the date of delivery to initiate a return. Returns initiated after this period may not be accepted. We recommend contacting us promptly if you are considering a return.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>13. Conditions for Returned Products</h2><p>Returned items must be in their original condition. We cannot accept returns for items that show signs of wear, damage, or alteration. Please ensure you handle the items carefully while deciding whether to keep them.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>14. Original Condition Requirement</h2><p>Items must be returned in the original condition they were delivered. This means they must be unworn, unwashed, and free from any stains, odors, or damage. Products that have been used or altered will not be accepted for return.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>15. Unused/Unworn Product Requirement</h2><p>All returned products must be unused and unworn. We understand you may try items on, but they must not have been worn outside or show any signs of use. Products that appear to have been worn will not be accepted.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>16. Tags and Packaging Requirements</h2><p>Please keep all original tags attached to the item. Return items in their original packaging, including any garment bags, boxes, or accessories that came with the product. Failure to do so may affect your return eligibility.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>17. Proof of Purchase/Order Number</h2><p>We require proof of purchase for all returns. The order number is usually sufficient. If you have a physical receipt, please include it with your return. This helps us process your return accurately.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>18. Products That Cannot Be Returned</h2><p>Certain products cannot be returned due to hygiene or safety reasons. These include [INSERT NON-RETURNABLE PRODUCTS]. Please check the product description before purchasing if you are unsure about return eligibility.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>19. Sale/Discounted Products</h2><p>Sale items and discounted products may be subject to different return policies. Please check the terms at the time of purchase. Some clearance items may be final sale and cannot be returned.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>20. Customized Products</h2><p>Customized, personalized, or made-to-order products cannot be returned unless they are defective or not as described. We will not accept returns for custom orders due to change of mind or sizing errors.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>21. Damaged Products</h2><p>If you receive a product that is damaged during shipping, please contact us immediately. We will work with you to resolve the issue, including offering a replacement or refund, depending on product availability.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>22. Defective Products</h2><p>If you believe you have received a defective product, please contact us with photos and a description of the defect. We will evaluate the issue and determine the appropriate resolution, which may include replacement or refund.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>23. Incorrect Products</h2><p>If you receive a product that is different from what you ordered, please contact us immediately. We will arrange for the correct item to be sent to you and provide return instructions for the incorrect item.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>24. Wrong Size</h2><p>We understand that sizing can be tricky. If you ordered the wrong size, you may be eligible for an exchange or return. Please check our size guide before ordering, and contact us for assistance with exchanges.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>25. Wrong Item Received</h2><p>If you receive an item that you did not order, please contact us immediately. We will correct the error by sending you the correct item and arranging for the return of the incorrect item at no cost to you.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>26. Return Shipping</h2><p>Customers are responsible for return shipping costs unless the return is due to our error (wrong item, damaged, or defective). We recommend using a trackable shipping method, as we are not responsible for returns that are lost in transit.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>27. Shipping Costs</h2><p>Original shipping costs are non-refundable unless the return is due to our error. If you return an item, the cost of return shipping will be deducted from your refund unless otherwise specified.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>28. Inspection Process</h2><p>Once we receive your returned item, it will be inspected to ensure it meets our return conditions. This process typically takes [INSERT INSPECTION TIME]. We will notify you of the outcome of the inspection.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>29. Return Approval/Rejection</h2><p>If your return is approved, we will process your refund or exchange. If your return is rejected, we will return the item to you at your expense and notify you of the reason for rejection. Rejected returns are typically due to items being used, damaged, or missing tags.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>30. Exchange Policy</h2><p>We offer exchanges for items that are defective, damaged, or incorrect. If you need to exchange an item for a different size or color, please contact us to confirm availability before returning the item.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>31. Size Exchange</h2><p>If you need to exchange an item for a different size, please contact us first. We will check availability and provide you with return instructions. We cannot guarantee that the desired size will be in stock at the time of exchange.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>32. Availability of Replacement Items</h2><p>Exchanges are subject to product availability. If the item you want is not available, we will offer a refund instead. We will notify you of the status of your exchange as soon as possible.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>33. Refund Eligibility</h2><p>Refunds are processed for items that meet our return conditions. Your refund will be issued in the original form of payment unless you request a store credit or gift card. We strive to process refunds promptly.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>34. Refund Processing</h2><p>Once your return is approved, we will initiate the refund process. You will receive confirmation when the refund has been processed. Please note that it may take some time for the funds to appear in your account depending on your payment provider.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>35. Refund Method</h2><p>Refunds will be issued using the original payment method used for the purchase. If you used a credit card, the refund will be credited to that card. For other payment methods, the refund will be processed accordingly.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>36. Refund Processing Time</h2><p>Refunds are typically processed within [INSERT REFUND PROCESSING TIME] of approving the return. Your bank or card issuer may require additional time to post the refund to your account.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>37. Original Payment Method</h2><p>Refunds will be credited to the original payment method used for the purchase. If the original payment method is no longer available, please contact us to discuss alternative options.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>38. Cash-On-Delivery Considerations</h2><p>[INSERT CASH-ON-DELIVERY POLICY]. If you paid using cash on delivery, refunds will be processed via bank transfer or store credit. Please contact us for detailed instructions.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>39. Partial Refunds</h2><p>In some cases, we may issue a partial refund. This may occur if the item shows signs of use, if you return only part of a set, or if the return is outside our standard policy. We will clearly communicate the reason for any partial refund.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>40. Shipping Charges and Refund Treatment</h2><p>Original shipping charges are not refundable except in cases where we made an error (e.g., wrong item, damaged product). Return shipping costs are the customer's responsibility unless the return is due to our error.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>41. Failed Delivery/Refused Delivery</h2><p>If a delivery attempt fails and the package is returned to us, we will contact you to arrange re-delivery. You may be responsible for additional shipping costs. If you refuse delivery, the return will be subject to our standard return policy.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>42. Lost Packages</h2><p>If your package is lost in transit, please contact us. We will work with the shipping carrier to locate the package. If the package cannot be located, we will provide a refund or replacement at no additional cost to you.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>43. Damaged Packages</h2><p>If you receive a package that appears to be damaged, please inspect the contents immediately. If the product is damaged, contact us with photos of the package and product. We will arrange for a replacement or refund.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>44. Customer Responsibility</h2><p>You are responsible for ensuring that your return is sent to the correct address and that you have proof of postage. We are not responsible for returns that are lost in transit. Please use a trackable shipping method.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>45. Company Responsibility</h2><p>We are responsible for processing returns and refunds in a timely, fair manner. If we make an error, we will correct it promptly and cover any associated costs. We are committed to treating all customers with respect and fairness.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>46. Fraudulent or Abusive Return Requests</h2><p>We reserve the right to refuse returns or refunds if we suspect fraudulent or abusive behavior. This includes returning items that are not in their original condition, providing false information, or making repeated unreasonable return requests.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>47. Multiple Return Requests</h2><p>We understand that occasional returns are normal. However, if we notice an excessive pattern of returns, we reserve the right to restrict your ability to make future purchases or require additional verification.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>48. Dispute Resolution</h2><p>If you have a dispute regarding a return or refund, please contact us first. We are committed to resolving issues in a fair and professional manner. If we cannot resolve the dispute, you may pursue other remedies as allowed by law.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>49. Contact Procedure</h2><p>To initiate a return, cancellation, or refund, please contact us at contact@clotheric.com. Include your order number and a clear description of the issue. We aim to respond to all inquiries within [INSERT RESPONSE TIME].</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>50. Policy Modifications</h2><p>We reserve the right to modify this policy at any time. Changes will be effective when posted on this page. We encourage you to review this policy periodically. Your continued use of our website constitutes acceptance of any changes.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>51. Effective Date</h2><p>This Cancellation, Return, and Refund Policy is effective as of [INSERT EFFECTIVE DATE]. Thank you for choosing CLOTHERIC. We value your trust and are committed to providing you with the best possible shopping experience.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>52. Contact Information</h2><p>If you have any questions about this policy or need assistance with a return, cancellation, or refund, please don't hesitate to contact us at contact@clotheric.com. We are here to help.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ OWNERSHIP ══════════════════════════════════════════════════ -->
+        <section id="ownership" class="section-anchor section-spacing" style="background:#FAFAFA;">
+            <div class="container-cinema">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <span class="text-[0.65rem] tracking-[0.2em] uppercase text-[#46321E] block mb-4 reveal reveal-fade-up">Legal</span>
+                        <h2 class="text-[2.4rem] md:text-[3.6rem] font-[200] tracking-[-0.02em] text-balance text-[#2B1F16] reveal reveal-fade-up"><span class="text-accent">Ownership</span> Statement</h2>
+                        <p class="text-[1rem] font-[300] text-[#2B1F16] mt-4 max-w-lg mx-auto leading-relaxed reveal reveal-fade-up">Protecting our creative work and intellectual property.</p>
+                    </div>
+                    <div class="stagger-children">
+                        <div class="legal-section reveal reveal-fade-up"><h2>1. Purpose</h2><p>This Ownership Statement is intended to clearly identify the owners and rights holders of CLOTHERIC, its content, and its intellectual property. We believe in transparency and protecting our creative work while respecting the rights of others.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>2. Brand Ownership</h2><p>CLOTHERIC is a [INSERT BRAND OWNERSHIP STATUS]. The brand identity, including the name "CLOTHERIC" and all associated branding elements, is owned by [INSERT LEGAL OWNER NAME]. We are committed to building a brand that is recognized for quality, innovation, and cinematic fashion experiences.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>3. Website Ownership</h2><p>The CLOTHERIC website, including all pages, content, and functionality, is owned and operated by [INSERT LEGAL OWNER NAME]. The website is a proprietary platform designed to deliver our unique cinematic fashion experience to users worldwide.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>4. Domain Ownership</h2><p>The domain name clotheric.com is the exclusive property of [INSERT LEGAL OWNER NAME]. We have secured this domain to establish our presence and protect our brand identity online. All rights to the domain name are reserved.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>5. Website Content Ownership</h2><p>All content on the CLOTHERIC website, including text, graphics, logos, images, videos, and other materials, is the exclusive property of [INSERT LEGAL OWNER NAME]. This content is protected by intellectual property laws and may not be used without permission.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>6. Logo Ownership</h2><p>The CLOTHERIC logo, including all variations and visual representations, is a registered/unregistered trademark of [INSERT LEGAL OWNER NAME]. The logo is a distinctive mark of our brand identity and may not be reproduced or modified without explicit permission.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>7. Brand Identity Ownership</h2><p>All elements of the CLOTHERIC brand identity, including but not limited to our color palette, typography, visual style, brand voice, and brand guidelines, are owned by [INSERT LEGAL OWNER NAME]. Our brand identity is a valuable asset that we actively protect.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>8. Product Photography</h2><p>All product photography displayed on the CLOTHERIC website is the exclusive property of [INSERT LEGAL OWNER NAME] unless otherwise stated. These images are protected by copyright and may not be used without our explicit permission.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>9. Product Descriptions</h2><p>All product descriptions, including detailed specifications, fabric information, and product stories, are original content created by [INSERT LEGAL OWNER NAME]. This written content is protected by copyright and may not be reproduced without authorization.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>10. Written Content</h2><p>All written content on the CLOTHERIC website, including editorial pieces, blog posts, marketing copy, and educational materials, is owned by [INSERT LEGAL OWNER NAME]. This includes the unique expressions, ideas, and narratives we share with our audience.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>11. Graphics</h2><p>All graphic designs, illustrations, infographics, and visual elements on the CLOTHERIC website are the exclusive property of [INSERT LEGAL OWNER NAME]. These graphic assets are protected by copyright and may not be used without permission.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>12. Illustrations</h2><p>Original illustrations created for the CLOTHERIC website are owned by [INSERT LEGAL OWNER NAME]. These creative works are an important part of our visual identity and are protected by intellectual property laws.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>13. Animations</h2><p>All animations, motion graphics, and interactive elements on the CLOTHERIC website are the exclusive property of [INSERT LEGAL OWNER NAME]. These include our cinematic transitions, scroll animations, and visual effects that define the CLOTHERIC experience.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>14. UI/UX Design</h2><p>The user interface (UI) and user experience (UX) design of the CLOTHERIC website, including the overall layout, navigation, and interaction patterns, are owned by [INSERT LEGAL OWNER NAME]. Our design is the result of significant creative effort and is protected as a proprietary work.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>15. Website Source Code</h2><p>The HTML, CSS, JavaScript, and all other source code used to build the CLOTHERIC website is the exclusive property of [INSERT LEGAL OWNER NAME]. This code represents our technical innovation and is protected by copyright law.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>16. Frontend Code</h2><p>The frontend code, including all components, frameworks, and custom scripts that power the user-facing portion of the CLOTHERIC website, is owned by [INSERT LEGAL OWNER NAME]. This code is essential to the functionality and feel of our platform.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>17. Backend Code</h2><p>The backend code that powers the server-side functionality of the CLOTHERIC platform, including databases, APIs, and application logic, is the exclusive property of [INSERT LEGAL OWNER NAME]. This proprietary code is central to our platform's operation.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>18. Databases</h2><p>All databases used by the CLOTHERIC platform, including product data, user information, and order history, are owned by [INSERT LEGAL OWNER NAME]. The structure and content of our databases are proprietary assets that we actively protect.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>19. Digital Assets</h2><p>All digital assets created for the CLOTHERIC platform, including but not limited to social media templates, email templates, digital advertisements, and promotional materials, are owned by [INSERT LEGAL OWNER NAME]. These assets are integral to our brand presence.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>20. Marketing Materials</h2><p>All marketing materials created for CLOTHERIC, including print materials, digital advertisements, promotional campaigns, and brand collateral, are owned by [INSERT LEGAL OWNER NAME]. These materials represent our brand voice and visual identity.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>21. Social Media Content</h2><p>All content posted on CLOTHERIC social media channels, including images, videos, text, and graphics, is owned by [INSERT LEGAL OWNER NAME]. Social media content is an extension of our brand identity and is protected by our intellectual property rights.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>22. Videos</h2><p>All video content produced for CLOTHERIC, including promotional videos, product showcases, and brand storytelling, is the exclusive property of [INSERT LEGAL OWNER NAME]. These videos are protected by copyright and may not be used without permission.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>23. Audio Content</h2><p>Any audio content used on the CLOTHERIC website, including sound design, music, and audio effects, is owned by [INSERT LEGAL OWNER NAME] or used with appropriate licenses. These audio elements contribute to our cinematic experience and are protected assets.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>24. Original Creative Work</h2><p>All original creative works developed for CLOTHERIC, including but not limited to writings, designs, and visual concepts, are the exclusive property of [INSERT LEGAL OWNER NAME]. These works are protected by copyright from the moment of creation.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>25. Intellectual Property</h2><p>All intellectual property associated with CLOTHERIC, including content, design, technology, and brand elements, is owned by [INSERT LEGAL OWNER NAME]. We actively manage and protect our intellectual property portfolio.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>26. Copyright</h2><p>All content on the CLOTHERIC website, unless otherwise credited, is protected by copyright. Copyright ownership belongs to [INSERT LEGAL OWNER NAME]. We take copyright infringement seriously and will enforce our rights where necessary.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>27. Trademarks</h2><p>The CLOTHERIC brand name, logo, and associated marks are protected by trademark law. [INSERT TRADEMARK INFORMATION]. Unauthorized use of our trademarks is strictly prohibited.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>28. Trade Names</h2><p>The trade name "CLOTHERIC" and any variants are the property of [INSERT LEGAL OWNER NAME]. We reserve the exclusive right to use this trade name in commerce and may take action against unauthorized use.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>29. Brand Names</h2><p>All brand names associated with CLOTHERIC, including product names and collection names, are owned by [INSERT LEGAL OWNER NAME]. These names are part of our brand identity and are protected by intellectual property law.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>30. Unauthorized Copying</h2><p>Unauthorized copying of any content from the CLOTHERIC website is strictly prohibited. This includes text, images, videos, graphics, or any other material. We actively monitor for copyright infringement and may take legal action against violators.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>31. Unauthorized Reproduction</h2><p>Reproduction of any CLOTHERIC content without permission is prohibited. This includes printing, digital storage, distribution, or any other form of reproduction. Please contact us if you wish to use our content.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>32. Unauthorized Commercial Use</h2><p>Commercial use of CLOTHERIC content, including our images, text, or brand elements, without express permission is strictly prohibited. If you are interested in commercial use, please contact us to discuss licensing opportunities.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>33. Website Scraping</h2><p>Automated scraping or data extraction from the CLOTHERIC website is prohibited. This includes the use of bots, crawlers, or other automated tools to collect our content or data. We reserve the right to block such activity.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>34. Content Redistribution</h2><p>Redistribution of CLOTHERIC content without permission is strictly prohibited. This includes republishing our content on other websites, blogs, or platforms. Please contact us for permission to share our content.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>35. Modification of Content</h2><p>Modification, alteration, or creation of derivative works from CLOTHERIC content without permission is prohibited. This includes editing images, rewriting text, or adapting our creative works in any way.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>36. Third-Party Materials</h2><p>Some materials on the CLOTHERIC website may be owned by third parties and used with permission. These materials are clearly identified where possible. Third-party materials are subject to their own copyright and usage terms.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>37. Third-Party Trademarks</h2><p>Any third-party trademarks appearing on the CLOTHERIC website are the property of their respective owners. We acknowledge these rights and do not claim ownership of third-party marks.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>38. Licensed Content</h2><p>Some content on the CLOTHERIC website may be used under license from third parties. This includes certain images, fonts, or software. Licensed content is used in accordance with the terms of the respective licenses.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>39. User-Generated Content</h2><p>User-generated content, such as customer reviews or comments, is owned by the user who creates it. By submitting content to CLOTHERIC, you grant us a non-exclusive license to use and display your content on our platform.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>40. Customer-Submitted Materials</h2><p>Any materials submitted by customers, including photos, videos, or feedback, become the property of [INSERT LEGAL OWNER NAME] upon submission, subject to applicable privacy laws. We may use this content for marketing, promotion, or other purposes.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>41. Permission Requirements</h2><p>To use any CLOTHERIC content, you must obtain explicit written permission from [INSERT LEGAL OWNER NAME]. Please contact us with details of your intended use, and we will respond within a reasonable timeframe.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>42. Requests for Authorization</h2><p>To request authorization to use CLOTHERIC content, please contact us at contact@clotheric.com. Please provide specific details about the content you wish to use and how you intend to use it. We will consider each request individually.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>43. Enforcement</h2><p>We actively enforce our intellectual property rights. Unauthorized use of CLOTHERIC content may result in legal action, including but not limited to cease and desist letters, DMCA takedown notices, and civil litigation.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>44. Contact Information</h2><p>For questions about this Ownership Statement or to report a copyright infringement, please contact us at contact@clotheric.com. We respond promptly to all intellectual property inquiries.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>45. Policy Updates</h2><p>We may update this Ownership Statement from time to time. Changes will be effective when posted on this page. We encourage you to review this statement periodically to understand how our ownership policies apply.</p></div>
+
+                        <div class="legal-section reveal reveal-fade-up"><h2>46. Effective Date</h2><p>This Ownership Statement is effective as of [INSERT EFFECTIVE DATE]. Thank you for respecting our intellectual property. CLOTHERIC is built on creativity, innovation, and hard work, and we appreciate your respect for our ownership rights.</p></div>
                     </div>
                 </div>
             </div>
@@ -1845,6 +2238,8 @@
                 <a data-target="faq">FAQ</a>
                 <a data-target="terms">Terms</a>
                 <a data-target="privacy">Privacy</a>
+                <a data-target="refund">Refund</a>
+                <a data-target="ownership">Ownership</a>
             </div>
             <!-- ─── SOCIAL NAV BAR ─── -->
             <div class="social-links">
