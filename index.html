@@ -3202,7 +3202,7 @@
                                 <div class="va-step">
                                     <span class="va-step-num">1</span>
                                     <h3>Visit Clotheric</h3>
-                                    <p>Visit <strong>www.clotheric.com</strong> or contact <strong>clothericdotcom@gmail.com</strong>.</p>
+                                    <p>Visit <strong>www.clotheric.com</strong> or contact <strong>vendor.clotheric@gmail.com</strong>.</p>
                                 </div>
                                 <div class="va-step">
                                     <span class="va-step-num">2</span>
@@ -3238,7 +3238,7 @@
                             <div class="va-contact-grid">
                                 <div class="va-contact-item">
                                     <span class="va-label">Email</span>
-                                    <a href="mailto:clothericdotcom@gmail.com">clothericdotcom@gmail.com</a>
+                                    <a href="mailto:vendor.clotheric@gmail.com">vendor.clotheric@gmail.com</a>
                                 </div>
                                 <div class="va-contact-item">
                                     <span class="va-label">Phone</span>
@@ -3463,17 +3463,6 @@
 
                     const isExpanded = content.classList.contains('expanded');
 
-                    // Close any other open cards first (optional — uncomment for "only one open at a time")
-                    // document.querySelectorAll('.more-content.expanded').forEach(el => {
-                    //     if (el.id !== content.id) {
-                    //         el.classList.remove('expanded');
-                    //         const parentCard = el.closest('.team-card');
-                    //         if (parentCard) parentCard.classList.remove('expanded');
-                    //         const siblingBtn = parentCard ? parentCard.querySelector('.more-btn') : null;
-                    //         if (siblingBtn) siblingBtn.classList.remove('expanded');
-                    //     }
-                    // });
-
                     if (isExpanded) {
                         content.classList.remove('expanded');
                         card.classList.remove('expanded');
@@ -3508,11 +3497,8 @@
                 var target = document.getElementById(id);
                 if (!target) return;
 
-                // Wait until after the loading overlay finishes (2.2s + 0.8s exit = ~3s)
-                // so the browser does not fight the overlay.
                 var delay = 3000;
 
-                // If the overlay is already gone, scroll sooner.
                 var overlay = document.getElementById('loading-overlay');
                 if (!overlay || overlay.style.display === 'none' || overlay.classList.contains('exit')) {
                     delay = 100;
@@ -3523,20 +3509,17 @@
                     var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
                     window.scrollTo({ top: top, behavior: 'smooth' });
 
-                    // Also mark the nav item active (reuses existing behavior)
                     var navLinks = document.querySelectorAll('[data-target="' + id + '"]');
                     navLinks.forEach(function(el) { el.classList.add('active'); });
                 }, delay);
             }
 
-            // Run when the page has fully loaded
             if (document.readyState === 'complete' || document.readyState === 'interactive') {
                 scrollToHashOnLoad();
             } else {
                 window.addEventListener('DOMContentLoaded', scrollToHashOnLoad);
             }
 
-            // Also handle the case where the user clicks an in-page link to #vendor-handbook
             window.addEventListener('hashchange', function() {
                 var id = decodeURIComponent(window.location.hash.substring(1));
                 if (!id) return;
